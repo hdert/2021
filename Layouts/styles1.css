@@ -1,0 +1,166 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+}
+
+a {
+  display: block;
+}
+
+#nav-float {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  padding: 0;
+  z-index: 100;
+}
+
+nav {
+  float: left;
+}
+
+div#nav-float header {
+  float: left;
+}
+
+nav.col-2 a {
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0%);
+  -ms-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
+  max-width: 100%;
+}
+
+nav a {
+  float: left;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+}
+
+/* nav {
+  /* display: inline-block; */
+/* position: relative; */
+/* right: 50%; */
+/* -webkit-transform: translate(-50%, 0%); */
+/* -ms-transform: translate(-50%, 0%); */
+/* transform: translate(-50%, 0%); */
+/* max-width: 100%; */
+/* } */
+
+/* Responsive */
+/* Mobile */
+[class*="col-"] {
+  width: 100%;
+  float: left;
+  padding: 10px;
+}
+
+.mobileOnly {
+  display: inline-block;
+}
+
+/* Make mobile only elements appear */
+
+.tabletAbove {
+  display: none;
+}
+
+.tabletBelow {
+  display: inline-block;
+}
+
+/* disappear tablet only elements */
+
+.desktopOnly {
+  display: none;
+}
+
+/* disappear desktop only elements */
+
+img {
+  width: unset;
+}
+
+/* let pictures be reactive */
+
+/* Tablet */
+@media only screen and (min-width: 500px) {
+  .tabletAbove {
+    display: inline-block;
+  }
+  /* Make tablet elements appear */
+  .mobileOnly {
+    display: none;
+  }
+  /* disappear mobile only elements */
+}
+
+/* Desktop */
+@media only screen and (min-width: 768px) {
+  .col-1 {
+    width: 8.33%;
+  }
+  .col-2 {
+    width: 16.66%;
+  }
+  .col-3 {
+    width: 25%;
+  }
+  .col-4 {
+    width: 33.33%;
+  }
+  .col-5 {
+    width: 41.66%;
+  }
+  .col-6 {
+    width: 50%;
+  }
+  .col-7 {
+    width: 58.33%;
+  }
+  .col-8 {
+    width: 66.66%;
+  }
+  .col-9 {
+    width: 75%;
+  }
+  .col-10 {
+    width: 83.33%;
+  }
+  .col-11 {
+    width: 91.66%;
+  }
+  .col-12 {
+    width: 100%;
+  }
+  /* Set column width for desktop */
+  .desktopOnly {
+    display: inline-block;
+  }
+
+  .tabletBelow {
+    display: none;
+  }
+  /* Make desktop only elements appear */
+}
+
+img {
+  display: inline-block;
+  position: relative;
+  max-width: 100%;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  /* position: fixed; */
+  font-size: 100%;
+}
