@@ -1,0 +1,317 @@
+@import 'https://fonts.googleapis.com/css?family=Raleway|Special+Elite|Roboto';
+
+/*********** GLOBAL SETTINGS ***********/
+
+html, * {
+    box-sizing: border-box;
+}
+
+html {
+    background: linear-gradient(135deg, #036, #ff0, #c00);
+    background-attachment: fixed;
+    font-family: 'Raleway', sans-serif;
+    /*background-image: url("../images/back.png");*/
+}
+
+/*********** MAIN CONTENT ***********/
+
+body {
+    width: 75%;
+    max-width: 800px;
+    margin: 50px auto 200px auto;
+    background-color: rgba(255,255,255,0.8);
+    border: 4px solid #333;
+    border-radius: 20px;
+    padding: 5px 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+}
+
+#main {
+    position: relative;
+}
+
+@media only screen and (max-width: 1200px) {
+    body {
+        margin-top: 90px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    body {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    body {
+        margin-top: 110px;
+    }
+}
+
+
+/*********** HEADINGS ***********/
+
+h1, h2, h3 {
+    font-family: 'Roboto', sans-serif;
+    margin: 0.3em 0 0.5em 0;
+    color: #036;
+}
+
+h1 {
+    font-family: 'Special Elite', sans-serif;
+    font-size: 3em;
+    text-shadow: 0px 5px 5px rgba(0,0,0,0.5);
+}
+
+/*********** NAVIGATION ***********/
+
+nav {
+    position: fixed;
+    left: -10px;
+    top: calc(50% - 10em);
+    width: 180px;
+    padding: 5px 5px 10px 15px;
+    border-radius: 10px;
+    background-color: rgba(255,255,255,0.7);
+    border: 3px solid #333;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    /*font-size: 0.9em;*/
+    z-index: 9;
+    transition: 500ms background-color;
+}
+
+nav:hover {
+    background: rgba(255,255,255,1.0);
+}
+
+nav a {
+    display: block;
+    padding: 2px 5px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #900;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    color: #fff;
+    background-color: #c00;
+}
+
+@media only screen and (max-width: 1200px) {
+    nav {
+        top: -10px;
+        left: calc(50% - 150px);
+        width: 300px;
+        font-size: 1.1em;
+        padding-bottom: 5px;
+    }
+
+    nav h2:after {
+        content: "\25BC";
+        position: absolute;
+        top: 1em;
+        right: 15px;
+        color: #666;
+        font-size: 0.8em;
+    }
+
+    nav #navlinks {
+        display: none;
+    }
+
+    nav:hover #navlinks {
+        display: block;
+    }
+
+    nav a {
+        display: inline-block;
+        width: 90%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    nav {
+        font-size: 1.3em;
+    }
+
+    nav h2:after {
+        content: "\2630";
+        font-size: 1.3em;
+        top: 0.2em;
+    }
+}
+
+
+/*********** FOOTER ***********/
+
+footer {
+    text-align: right;
+    font-size: 0.7em;
+    color: #666;
+}
+
+
+/*********** TEXT ***********/
+
+p.cols {
+    columns: 3;
+}
+
+@media only screen and (max-width: 800px) {
+    p.cols {
+        columns: 1;
+    }
+}
+
+
+/*********** FIGURES / IMAGES ***********/
+
+figure.right {
+    float: right;
+    margin: 0 0 10px 20px;
+}
+
+figure.left {
+    float: left;
+    margin: 0 20px 10px 0;
+}
+
+figure img {
+    border: 3px solid #333;
+}
+
+figcaption {
+    margin: 10px 0 0 0;
+    color: #369;
+    text-align: center;
+    font-style: italic;
+}
+
+@media only screen and (max-width: 600px) {
+    figure.left,
+    figure.right {
+        float: none;
+        text-align: center;
+    }
+}
+
+
+/*********** IMAGE EFFECTS ***********/
+
+figure#goat img {
+    -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+    filter: grayscale(100%);
+    transition: 1s filter, 1s -webkit-filter;
+}
+
+figure#goat img:hover {
+    -webkit-filter: grayscale(0%); /* Chrome, Safari, Opera */
+    filter: grayscale(0%);
+}
+
+figure#pig img {
+    transition: 1s transform;
+}
+
+figure#pig img:hover {
+    transform: scale(1.3) rotate(-15deg);
+}
+
+figure#cow img {
+    transition: 1s transform;
+}
+
+figure#cow img:hover {
+    transform: rotateX(180deg) rotateY(-180deg);;
+}
+
+
+
+
+
+/*********** NOTES **************************************************************/
+
+#note-shadow  { left: 25%; bottom: -100px; }
+#note-rounded { right: -60px; bottom: -20px; }
+#note-filter  { right: -10px; top: 130px; }
+#note-2d      { left: -10px; top: 320px; }
+#note-3d      { right: -10px; top: 590px; }
+#note-font    { left: -55px; top: -40px; }
+#note-textsh  { left: -55px; top: 20px; }
+#note-cols    { left: 30px; bottom: 100px; }
+#note-trans   { right: -10px; top: 0px; }
+#note-grad    { right: 8%; bottom: 200px; position: fixed; }
+#note-fixbk   { right: 8%; top: 120px; position: fixed; }
+#note-media   { right: 7%; top: 50px; position: fixed; }
+#note-fixed   { left: 100px; top: calc(50% + 9em); position: fixed; z-index: 20; }
+
+@media only screen and (max-width: 1200px) {
+    #note-fixed   { left: calc(50% - 180px); top: 3%; }
+    #note-grad    { right: 3%; }
+    #note-fixbk   { right: 3%; }
+}
+
+@media only screen and (max-width: 800px) {
+    .note  { display: none; }
+}
+
+
+.note {
+    opacity: 0.3;
+    position: absolute;
+    background-color: #900;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    padding: 0;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.5);
+    z-index: 5;
+    transition: 500ms opacity;
+}
+
+.note:hover {
+    cursor: help;
+    background-color: #c00;
+    opacity: 1.0;
+    z-index: 99;
+}
+
+.note .details {
+    display: none;
+}
+
+.note h2 {
+    color: #fff;
+    margin: 0.4em 0 1em 0;
+}
+
+.note .details h3 {
+    margin: 0.2em 0 0.5em 0;
+    color: #c00;
+}
+
+.note .details p {
+    font-size: 0.9em
+}
+
+.note:hover .details {
+    display: block;
+    z-index: 999;
+    position: relative;
+    width: 180px;
+    top: -10px;
+    left: -67px;
+    padding: 5px 10px;
+    text-align: left;
+    background-color: #ff0;
+    border: 2px solid #c00;
+    border-radius: 10px;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.5);
+}

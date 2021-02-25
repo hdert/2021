@@ -1,0 +1,50 @@
+body {
+  background-image: url("../images/island.png");
+  background-size: 1000px 500px;
+}
+
+h1 {
+  color: #00ff00;
+}
+
+nav {
+  width: 130px;
+}
+
+nav a {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  border: 2px solid black;
+  text-decoration: none;
+  width: 130px;
+  padding: 5px;
+  background-color: white;
+  color: #003311;
+  text-align: center;
+  font-size: 16pt;
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: 2px 4px 6px #333333;
+}
+
+nav a:hover {
+  background-color: Red;
+}
+
+#heading {
+  font-size: 34pt;
+  color: blue;
+  text-align: Right;
+}
+
+#container {
+  width: 80%;
+  margin: 30px, auto, 30px, auto;
+  border: 2px solid black;
+  background-color: rgba(255, 255, 255, 0.5);
+
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
