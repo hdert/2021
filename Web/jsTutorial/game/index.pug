@@ -1,0 +1,22 @@
+doctype html 
+html 
+    head 
+        title Dynamic Pages | JavaScript 
+        link(rel="stylesheet" href="css/styles.css" type="text/css")
+    body 
+        #left-con 
+            #current-1.curr
+                h2 Player 1
+            section#p1score 0
+        #right-con 
+            #current-2 
+                h2 Player 2
+            section#p2score 0
+        #bot 
+            img#die(src="images/dice-1.png")
+            aside#temp 0
+            button(onclick="gen()") Generate 
+            button(onclick="keep()") Keep 
+            button(onclick="restart()") Start 
+        script(type="text/javascript" src="js/main.js")
+        
