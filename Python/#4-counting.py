@@ -1,4 +1,4 @@
-from keyboard import write, send
+from pyautogui import write, press, size, screenshot
 from time import sleep
 
 
@@ -33,28 +33,44 @@ def show_countdown():
         sleep(1)
 
 
+def get_screenshot_region(screenshot_width, screenshot_height):
+    width, height = size()
+    return (0, height - screenshot_height, screenshot_width, screenshot_height)
+
+
+def screenshot_region(screenshot_width, screenshot_height):
+    return screenshot(
+        region=(get_screenshot_region(screenshot_width, screenshot_height)))
+
+
 def main():
-    write(' ')
     number = integer_validation("Pick your starting number: ",
                                 "Invalid input, write a number like 1 or 5")
     iterations = integer_validation(
         "Pick how many numbers you want to write: ",
         "Invalid input, write a number like 1 or 5")
     show_countdown()
+    initial_screenshot = screenshot_region(50, 50)
     delay = delay_calculate(number)
     active = True
     while active:
         for number in range(number, number + iterations):
             if len(str(number)) != delay:
                 delay = delay_calculate(number)
-            write(f"{number}", delay=delay)
-            send('enter')
+            write(f"{number}", interval=delay)
+            if initial_screenshot != screenshot_region(50, 50):
+                active = False
+                break
+            press('enter')
             number += 1
+        if not active:
+            break
         user_input = boolean_validation(
             f"Do you want to print another {iterations} numbers [Y]es [N]o: ",
             "Invalid input, write one of the letters 'y' or 'n'")
         if user_input:
             show_countdown()
+            initial_screenshot = screenshot_region(50, 50)
             continue
         break
 
