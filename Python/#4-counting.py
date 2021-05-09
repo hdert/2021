@@ -57,7 +57,7 @@ def main():
         for number in range(number, number + iterations):
             if len(str(number)) != delay:
                 delay = delay_calculate(number)
-            write(f"{number}", interval=delay)
+            write("{}".format(number), interval=delay)
             if initial_screenshot != screenshot_region(50, 50):
                 active = False
                 break
@@ -66,7 +66,8 @@ def main():
         if not active:
             break
         user_input = boolean_validation(
-            f"Do you want to print another {iterations} numbers [Y]es [N]o: ",
+            "Do you want to print another {} numbers [Y]es [N]o: ".format(
+                iterations),
             "Invalid input, write one of the letters 'y' or 'n'")
         if user_input:
             show_countdown()
