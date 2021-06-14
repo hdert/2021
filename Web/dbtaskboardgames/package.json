@@ -7,9 +7,9 @@
     "css-prefix": "postcss --replace dist/*.css --use autoprefixer --map",
     "css-purge": "purgecss --keyframes --css dist/*.css --content dist/*.html --content dist/*.js --output dist/",
     "css": "run-s css-prefix css-purge css-lint",
-    "start": "parcel serve --dist-dir 'dev/' './src/pug/*.pug'",
+    "start": "parcel serve --dist-dir 'dev/' './src/php/*.php'",
     "preparcel-build": "./.bin/preparcel-build",
-    "parcel-build": "parcel build --no-optimize --no-content-hash --dist-dir 'dist/' './src/pug/*.pug'",
+    "parcel-build": "parcel build --no-optimize --no-content-hash --dist-dir 'dist/' './src/php/*.php'",
     "build": "run-s parcel-build css",
     "gh-pages-push": "git subtree push --prefix dist origin gh-pages",
     "gh-pages-subtree-create": "git subtree split --prefix dist --branch gh-pages"
