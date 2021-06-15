@@ -4,30 +4,6 @@
         <meta charset="utf-8">
         <title>Boardgames</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <style>
-          .card {
-            float: left;
-            width: calc(25% - 2%);
-            padding: 1%;
-            margin-left: 1%;
-            margin-top: 1%;
-            box-sizing: border-box;
-            box-shadow: 5px 5px 5px gray;
-            border-radius: 5px;
-            background-color: palegreen;
-          }
-          p {
-            margin: 0;
-          }
-          img {
-            width: 100%;
-          }
-          .row::after {
-            content: "";
-            clear: both;
-            display: table;
-          }
-        </style>
     </head>
     
     <body>
@@ -51,7 +27,7 @@
               }
               print "<div class='card'>
                 <p>".$record['game']."</p>
-                <img src='/img/optimized".strrchr($record['images'], '/')."' alt='".$record['game']."'>
+                <img class='top' src='/img/optimized".strrchr($record['images'], '/')."' alt='".$record['game']."'>
                 <hr>
                 <p>$".$record['cost']."</p>
                 <p>".$record['rating']."</p>
