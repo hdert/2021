@@ -17,7 +17,13 @@
     </head>
     
     <body>
-        <h1>Boardgames</h1>        
+        <h1>Boardgames</h1>    
+        <div>
+          <a href="table.php">Table</a>
+          <a href="index.php">Home</a>
+          <a href="gallery.php">Gallery</a>
+          <a href="top.php">Top</a>
+        </div>
                 
         <?php
             include "../includes/connect.php";
